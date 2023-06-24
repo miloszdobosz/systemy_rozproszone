@@ -1,9 +1,9 @@
-defmodule Helloworld.Mixfile do
+defmodule Subscriptions.Mixfile do
   use Mix.Project
 
   def project do
     [
-      app: :helloworld,
+      app: :subscriptions,
       version: "0.1.0",
       elixir: "~> 1.4",
       build_embedded: Mix.env() == :prod,
@@ -13,7 +13,7 @@ defmodule Helloworld.Mixfile do
   end
 
   def application do
-    [mod: {HelloworldApp, []}, applications: [:logger, :grpc]]
+    [mod: {SubscriptionsApp, []}, extra_applications: [:logger, :grpc]]
   end
 
   defp deps do
